@@ -7,12 +7,12 @@ import dummy from '@/data/dummy';
 
 function EditResume() {
     const params = useParams();
-    const [resumeInfo, SetResumeInfo] = useState();
+    const [resumeInfo, setResumeInfo] = useState(dummy);
     // we want to execute once this useeffect that's why we add [].
     useEffect(()=>{
         // console.log(params.resumeid)
         // GetResumeInfo();
-        SetResumeInfo(dummy);
+        setResumeInfo(dummy);
     },[])
 
   return (
