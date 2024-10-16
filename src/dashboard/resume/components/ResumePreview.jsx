@@ -8,7 +8,7 @@ import SkillsPreview from './preview/SkillsPreview';
 
 function ResumePreview() {
 // here we accesing the data that's why we use curly braces after const
-    const {resumeInfo, SetResumeInfo} = useContext(ResumeInfoContext);
+    const {resumeInfo, setResumeInfo} = useContext(ResumeInfoContext);
 
   return (
     <div className='shadow-lg h-full p-14 border-t-[20px]'

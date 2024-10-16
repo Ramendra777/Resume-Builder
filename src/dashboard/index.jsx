@@ -33,7 +33,7 @@ function Dashboard() {
       mt-10
       '>
           <AddResume/>
-          {resumeList.length>0&&resumeList.map((resume,index)=>(
+          {resumeList.length>0 && resumeList.map((resume,index)=>(
           <ResumeCardItem resume={resume} key={index} refreshData={GetResumesList} />
           ))}
       </div>

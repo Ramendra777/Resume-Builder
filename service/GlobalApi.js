@@ -10,11 +10,16 @@ const axiosClient=axios.create({
     }
 })
 
+
 const CreateNewResume=(data)=>axiosClient.post('/user-resumes',data);
 
 const GetUserResumes=(userEmail)=>axiosClient.get('/user-resumes?filters[userEmail][$eq]='+userEmail);
 
+// during update an entry we have to pass id not the resumeid.
+const UpdateResumeDetail=(id,data)=>axiosClient.put('/user-resumes/'+id,data)
+
 export default{
     CreateNewResume,
-    GetUserResumes
+    GetUserResumes,
+    UpdateResumeDetail
 }
