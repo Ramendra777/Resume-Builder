@@ -71,7 +71,7 @@ function Summary({enabledNext}) {
                     > <Brain className='h-4 w-4'/> Generate From AI</Button>
                 </div>
                 <Textarea className="mt-5" required
-                defaultValue={resumeInfo?.summary}
+                defaultValue={summary?summary:resumeInfo?.summary}
                 onChange={(e)=>setSummary(e.target.value)}
                 />
                 <div className='mt-2 flex justify-end'>
