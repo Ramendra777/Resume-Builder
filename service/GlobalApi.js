@@ -18,8 +18,12 @@ const GetUserResumes=(userEmail)=>axiosClient.get('/user-resumes?filters[userEma
 // during update an entry we have to pass id not the resumeid.
 const UpdateResumeDetail=(id,data)=>axiosClient.put('/user-resumes/'+id,data)
 
+const GetResumeById=(id)=>axiosClient.get('/user-resumes/'+id+"?populate=*")
+// "?populate=*" this will populate all info related with component of database
+
 export default{
     CreateNewResume,
     GetUserResumes,
-    UpdateResumeDetail
+    UpdateResumeDetail,
+    GetResumeById
 }
